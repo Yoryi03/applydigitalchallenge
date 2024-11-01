@@ -12,6 +12,8 @@ describe('Automation Challenge', () => {
   beforeEach(() => {
     cy.visit('https://automationexercise.com/')
   });
+
+  // Use of custom command to generate random number for the quantity products
   it('Add a product with a ramdong quantity and checkout without user ', () => {
     homepage.clickNavProducts();
     productspage.clickProduct();
@@ -23,6 +25,8 @@ describe('Automation Challenge', () => {
     cartpage.clickCheckout();
     cartpage.clickLoginRegister();
   })
+
+  // Here I'm using fixtures as data test with valid credential
   tests.forEach((test) => {
   it('Add a product with a ramdong quantity and checkout with a valid user ', () => {
     homepage.clickNavProducts();
@@ -39,6 +43,8 @@ describe('Automation Challenge', () => {
     login_registerpage.clickloginBtn();
   })
 })
+
+// Here I'm using fixtures as data test with invalid credential
   tests.forEach((test) => {
   it('Add a product with a ramdong quantity and checkout with a invalid user ', () => {
     homepage.clickNavProducts();
@@ -58,7 +64,7 @@ describe('Automation Challenge', () => {
   })
 })
   
-  
+  // full flow with the extra steps using fakerjs and custom commands 
   it('Complete checkout process with ramdong data', () => {
     homepage.clickNavProducts();
     productspage.clickProduct();
@@ -109,6 +115,7 @@ describe('Automation Challenge', () => {
   })
 })
 
+// here i'm using diferents viewport to test responsiveness 
 describe('Automation Challenge Mobile Viewport', () => {
   beforeEach(() => {
     cy.visit('https://automationexercise.com/')

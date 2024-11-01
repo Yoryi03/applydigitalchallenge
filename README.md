@@ -1,58 +1,43 @@
-# Apply Digital Challenge
 
-This project includes Cypress for end-to-end testing. Cypress is a powerful testing framework that allows you to easily create, manage, and run tests for web applications. Below are the commands available for running Cypress in various modes.
+# [![Cypress](https://cloud.githubusercontent.com/assets/1268976/20607953/d7ae489c-b24a-11e6-9cc4-91c6c74c5e88.png)](https://www.cypress.io)
 
-## Prerequisites
+## Apply Digital challenge project created using [Cypress](https://www.cypress.io), [JavaScript](https://developer.mozilla.org/es/docs/Web/JavaScript) y [Node.js](https://nodejs.org/en/)
 
-Ensure Cypress is installed by running:
+### General Requirements
+
+- Install [Node.js](https://nodejs.org/es/download/).
+- Install Chrome, Firefox o Edge.
+
+### Test Framework Instalation
+
+#### **Clone the repository:**
+
+```bash
+git clone [https://github.com/Yoryi03/applydigitalchallenge.git]
+```
+
+#### **Install the dependencies.**
+
 ```bash
 npm install
 ```
 
-## Cypress Commands
-The following scripts are available to run Cypress tests in different environments and configurations.
-
-1. npm run cypress:open
-Description: Opens the Cypress Test Runner in GUI mode. This allows you to select and run individual tests interactively, observe test execution, and debug your application as the tests run.
-
-Usage:
+#### **Open the Test Runner**
 
 ```bash
-npm run cypress:open
+npx cypress open
 ```
 
-2. npm run cypress:run
-Description: Runs all Cypress tests in headless mode using the default browser (Electron). This command is typically used in CI/CD environments where tests need to run without user interaction.
-
-Usage:
+### **Run headless and generate report with mochawesome**
 
 ```bash
-npm run cypress:run
+npx cypress run
 ```
 
-3. npm run cypress:run:headless
-Description: Similar to cypress:run, but explicitly runs all tests in headless mode, using the default headless browser.
+### exercise Web
 
-Usage:
+[public web](https://automationexercise.com).
 
-```bash
-npm run cypress:run:headless
-```
+### Crédits
 
-4. npm run cypress:run:chrome
-Description: Runs all tests headless in Google Chrome. This command is useful if you want to ensure that tests pass on Chrome specifically, which is commonly used in production environments.
-
-Usage:
-
-```bash
-npm run cypress:run:chrome
-```
-
-5. npm run cypress:run:firefox
-Description: Runs all tests headless in Firefox. This can be useful to confirm compatibility with Firefox, ensuring your application behaves consistently across different browsers.
-
-Usage:
-
-```bash
-npm run cypress:run:firefox
-```
+[![Cypress.io](https://img.shields.io/badge/tested%20with-Cypress-04C38E.svg)](https://www.cypress.io/)
