@@ -14,12 +14,12 @@ describe('Automation Challenge', () => {
   });
 
   // Use of custom command to generate random number for the quantity products
-  it('Add a product with a ramdong quantity and checkout without user ', () => {
+  it('Add a product with a random quantity and checkout without user ', () => {
     homepage.clickNavProducts();
     productspage.clickProduct();
     productspage.clearquantity();
     productspage.typequantity();
-    cy.screenshot("Ramdong Quantity")
+    cy.screenshot("random Quantity")
     productspage.clickAdd();
     productspage.clickViewCar();
     cartpage.clickCheckout();
@@ -28,12 +28,12 @@ describe('Automation Challenge', () => {
 
   // Here I'm using fixtures as data test with valid credential
   tests.forEach((test) => {
-  it('Add a product with a ramdong quantity and checkout with a valid user ', () => {
+  it('Add a product with a random quantity and checkout with a valid user ', () => {
     homepage.clickNavProducts();
     productspage.clickProduct();
     productspage.clearquantity();
     productspage.typequantity();
-    cy.screenshot("Ramdong Quantity")
+    cy.screenshot("random Quantity")
     productspage.clickAdd();
     productspage.clickViewCar();
     cartpage.clickCheckout();
@@ -46,12 +46,12 @@ describe('Automation Challenge', () => {
 
 // Here I'm using fixtures as data test with invalid credential
   tests.forEach((test) => {
-  it('Add a product with a ramdong quantity and checkout with a invalid user ', () => {
+  it('Add a product with a random quantity and checkout with a invalid user ', () => {
     homepage.clickNavProducts();
     productspage.clickProduct();
     productspage.clearquantity();
     productspage.typequantity();
-    cy.screenshot("Ramdong Quantity")
+    cy.screenshot("random Quantity")
     productspage.clickAdd();
     productspage.clickViewCar();
     cartpage.clickCheckout();
@@ -65,12 +65,12 @@ describe('Automation Challenge', () => {
 })
   
   // full flow with the extra steps using fakerjs and custom commands 
-  it('Complete checkout process with ramdong data', () => {
+  it('Complete checkout process with random data', () => {
     homepage.clickNavProducts();
     productspage.clickProduct();
     productspage.clearquantity();
     productspage.typequantity();
-    cy.screenshot("Ramdong Quantity")
+    cy.screenshot("random Quantity")
     productspage.clickAdd();
     productspage.clickViewCar();
     cartpage.clickCheckout();
@@ -120,26 +120,26 @@ describe('Automation Challenge Mobile Viewport', () => {
   beforeEach(() => {
     cy.visit('https://automationexercise.com/')
   });
-  it('Add a product with a ramdong quantity and checkout without user ', () => {
+  it('Add a product with a random quantity and checkout without user ', () => {
     cy.viewport('iphone-x','landscape')
     homepage.clickNavProducts();
     productspage.clickProduct();
     productspage.clearquantity();
     productspage.typequantity();
-    cy.screenshot("Ramdong Quantity iphone-x Viewport")
+    cy.screenshot("random Quantity iphone-x Viewport")
     productspage.clickAdd();
     productspage.clickViewCar();
     cartpage.clickCheckout();
     cartpage.clickLoginRegister();
   })
   tests.forEach((test) => {
-  it('Add a product with a ramdong quantity and checkout with a valid user ', () => {
+  it('Add a product with a random quantity and checkout with a valid user ', () => {
     cy.viewport('samsung-note9','portrait')
     homepage.clickNavProducts();
     productspage.clickProduct();
     productspage.clearquantity();
     productspage.typequantity();
-    cy.screenshot("Ramdong Quantity samsung-note9 Viewpor")
+    cy.screenshot("random Quantity samsung-note9 Viewpor")
     productspage.clickAdd();
     productspage.clickViewCar();
     cartpage.clickCheckout();
@@ -150,13 +150,13 @@ describe('Automation Challenge Mobile Viewport', () => {
   })
 })
   tests.forEach((test) => {
-  it('Add a product with a ramdong quantity and checkout with a invalid user ', () => {
+  it('Add a product with a random quantity and checkout with a invalid user ', () => {
     cy.viewport('ipad-mini','portrait')
     homepage.clickNavProducts();
     productspage.clickProduct();
     productspage.clearquantity();
     productspage.typequantity();
-    cy.screenshot("Ramdong Quantity ipad-mini Viewport")
+    cy.screenshot("random Quantity ipad-mini Viewport")
     productspage.clickAdd();
     productspage.clickViewCar();
     cartpage.clickCheckout();
@@ -170,13 +170,13 @@ describe('Automation Challenge Mobile Viewport', () => {
 })
   
   
-  it('Complete checkout process with ramdong data', () => {
+  it('Complete checkout process with random data', () => {
     cy.viewport('samsung-s10','portrait')
     homepage.clickNavProducts();
     productspage.clickProduct();
     productspage.clearquantity();
     productspage.typequantity();
-    cy.screenshot("Ramdong Quantity")
+    cy.screenshot("random Quantity")
     productspage.clickAdd();
     productspage.clickViewCar();
     cartpage.clickCheckout();
